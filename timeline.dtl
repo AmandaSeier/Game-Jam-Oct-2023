@@ -1,7 +1,5 @@
 [background arg="res://Assets/Backgrounds/Field.png" fade="0.0"]
 join Aime 3
-HELLO PLAYER WELCOME TO MY WORLD - WILL YOU MARRY ME?
-- YES
-	\:>
-- NO!????!?!?
-	FUCK YOU #/#&"&" BDHA "&"F&"&"
+[text_input text="Hello, what's your name?" var="Player_name" placeholder="Your name here."]
+What a beautiful name, {Player_name}.
+Aime (Default): My name's Aime!

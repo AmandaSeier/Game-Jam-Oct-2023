@@ -22,7 +22,9 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 [dialogic]
 
 glossary/default_case_sensitive=true
-variables={}
+variables={
+"Player_name": ""
+}
 text/letter_speed=0.01
 text/skippable=true
 text/skippable_delay=0.1
@@ -40,6 +42,7 @@ save/autosave_delay=60.0
 text/autopauses={}
 layout/styles={
 "Default": {
+"export_overrides": {},
 "inherits": ""
 }
 }

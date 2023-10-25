@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ditygeif28u03"
-path="res://.godot/imported/Aime_default.png-3e514021481101b689bef05e96795976.ctex"
+uid="uid://brqg6nrhayfcr"
+path="res://.godot/imported/CharacterPose3Smile.png-9d935fd46ee32a3e713891593215503c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Aime/Aime_default.png"
-dest_files=["res://.godot/imported/Aime_default.png-3e514021481101b689bef05e96795976.ctex"]
+source_file="res://Assets/Characters/Aime/Pose 3/CharacterPose3Smile.png"
+dest_files=["res://.godot/imported/CharacterPose3Smile.png-9d935fd46ee32a3e713891593215503c.ctex"]
 
 [params]
 
