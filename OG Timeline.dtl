@@ -1,7 +1,6 @@
 You: *Sometimes I wonder...*
 You: *What is it that makes my world real?*
 You: *How could I even know what real even means?*
-jump HELLO
 You: *I definitly feel each breath I take.*
 You: *And I definitly am avare of each thought in my mind.*
 You: *But is feeling and being avere really enough?*
@@ -25,7 +24,6 @@ You: *I had decided to go out to enjoy the nice weather after school.*
 You: *I found a really nice spot to sit down next to a corn field.*
 You: *But before I knew it I was fast asleep*
 Aime: Finally! You're awake.
-label HELLO
 join Aime 3
 You: *Oh and this... This is Aime.*
 You: *We've been friends since elementary school*
@@ -188,7 +186,7 @@ You: *What should I say?*
 if {Username} == "Admin" or {Username} == "admin" or {Username} == "ADMIN":
 	Aime: Enter password
 	[text_input var="Password"]
-
+	
 	if {Password} == "Admin" or {Username} == "admin" or {Password} == "ADMIN":
 		jump Correct username and password/
 	else:
@@ -210,4 +208,3 @@ else:
 	You: *But I know what I saw was real.*
 	You: *I just keep thinking...*
 	You: *What if there was something else I could've said?*
-
