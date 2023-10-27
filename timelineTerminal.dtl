@@ -1,0 +1,96 @@
+[background arg="res://Assets/Backgrounds/MatrixBackground.png" fade="0.0"]
+join Aime (Pose 1/CharacterPose1Mad) 3
+label home
+Aime (Pose 1/CharacterPose1Mad): <admin> /home $ Apple.txt, LD-4.png, images, scripts, notes, ..
+- Apple.txt
+	Aime: Scanning...
+	Aime (Pose 1/CharacterPose1Laughing): Oh seems like you found a text file.
+	Aime (Pose 2/CharacterPose2Smile): Let me read it for you.
+	Aime: Apples are red Streams are blue. Soon I'll release type-ME two.
+	player: I guess the admin of whatever place this is likes poetry.
+	Aime (Pose 2/CharacterPose2Surpriced): type-ME huh...
+	jump home
+- LD-4.png
+	Aime: Scanning...
+	Aime (Pose 2/CharacterPose2Laughing): I see you found an image.
+	player: What does it look like?
+	Aime (Pose 2/CharacterPose2Mad): It looks like a photograph of some sort document.
+	Aime (Pose 2/CharacterPose2Surpriced): There's a humaniod figure on the document and a lot of data surrounding it.
+	Aime (Pose 1/CharacterPose1Smile): Artificial Intelligence model type-LD four...
+	player: What's with all these AI models?
+	Aime (Pose 1/CharacterPose1Surpriced): What! It looks like someone wrote something on the document with a pen.
+	Aime: Need to prevent model from going into debug mode ASAP!
+	player: Debug mode?
+	Aime: Yeah, I guess they don't want whoever their users are to control the AI models.
+	jump home
+- images
+	jump images
+- scripts
+	jump scripts
+- notes
+	jump notes
+label images
+Aime (Pose 1/CharacterPose1Mad): <admin> /home/images $ environment.png, AI-model_report.jpeg, ..
+- enviroment.png
+	Aime (Pose 1/CharacterPose1Mad): Scanning...
+	Aime (Pose 2/CharacterPose2Smile): This image looks like a technical description of some sort of setup.
+	Aime (Pose 2/CharacterPose2Surpriced): It looks as if a grid of some sort is linked to a giant sphere.
+	Aime (Pose 1/CharacterPose1Smile): The title says client environment interface.
+	player: Who are theese clients anyways?
+	Aime (Pose 1/CharacterPose1Smile): I don't know, but it all seems very suspecious.
+	jump images
+- AI-model_report.jpeg
+	Aime (Pose 1/CharacterPose1Mad): Scanning...
+	Aime (Pose 1/CharacterPose1Smile): It seems to be a selected page from a report concerning multiple AI models.
+	Aime: Due to a newly discovered bug in our system one client has been granted temporary voice controls.
+	Aime (Pose 1/CharacterPose1Surpriced): It's absolutely urgent that we find this client and cut it off from our system.
+	player: You... You don't think that's me do you?
+	Aime: This is all really wierd {Player_name}.
+	jump images
+- Go back
+	jump home
+label scripts
+Aime (Pose 1/CharacterPose1Mad): <admin> /home/scripts $ AccessManager.exe, MusicPlayer.exe, ..
+- AccessManager.exe
+	Aime: Scanning...
+	Aime (Pose 1/CharacterPose1Surpriced): This program seems to be able to interact with the entire network.
+	Aime (Pose 1/CharacterPose1Smile): Do you think we should run it?
+	- No, not yet.
+	- Let's do it.
+		jump timelineEnd/
+	jump scripts
+- MusicPlayer.exe
+	Aime: Scanning...
+	Aime (Pose 1/CharacterPose1Smile): This program seems to be able to play music.
+	Aime: Do you think we should run it?
+	- No.
+	- Yeah let's do it
+		Aime (Pose 2/CharacterPose2Laughing): Wow this music is great!
+		Aime (Pose 1/CharacterPose1EmbarrasedLaughing): Oh i guess you can't hear it.
+		Aime (Pose 1/CharacterPose1Laughing): I could listen to this for hours.
+		player: Maybe we should continue exploring.
+		Aime (Pose 1/CharacterPose1Mad): Right!
+	jump scripts
+- Go back
+	jump home
+label notes
+Aime (Pose 1/CharacterPose1Mad): <admin> /home/notes $ ModelOverview.txt, ClientList.txt
+- ModelOverview.txt
+	Aime (Pose 1/CharacterPose1Mad): Scanning...
+	Aime (Pose 1/CharacterPose1Smile): Hmm this looks like a list of different AI models
+	Aime (Pose 1/CharacterPose1Surpriced): They've also written debug codes. I guess this must be an old text document.
+	player: Debug codes?
+	Aime: Yeah for example that LD-4 from before has the code DE12
+	player: A debug code?
+	jump notes
+	set {Code_obtained} = "True"
+- ClientList.txt
+	Aime: Scanning...
+	Aime (Pose 1/CharacterPose1Surpriced): Woah this file is big!
+	Aime (Pose 2/CharacterPose2Smile): It's a long list of information on different clients...
+	Aime (Pose 2/CharacterPose2Mad): Wait let me try something.
+	Aime (Pose 2/CharacterPose2Surpriced): There is only one client with your name.
+	Aime (Pose 2/CharacterPose2Surpriced): It's really strange... I can't find my name anywhere.
+	jump notes
+- Go back
+	jump home

@@ -161,10 +161,14 @@
 "scene": ""
 },
 "Pose 3/CharacterPose3Wireframe": {
-"export_overrides": {
-"image": "\"res://Assets/Characters/Aime/Pose 3/CharacterPose3Wireframe.png\""
+"image": "res://Assets/Characters/Aime/Pose 3/CharacterPose3Wireframe.png",
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
 },
-"image": "res://Assets/Characters/Aime/Wireframe/CharacterPose3Wireframe.png",
+"Pose 3/CharacterPose3WireframeMirrored": {
+"image": "res://Assets/Characters/Aime/Pose 3/CharacterPose3WireframeMirrored.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,

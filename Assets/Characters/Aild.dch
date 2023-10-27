@@ -1,0 +1,47 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "Pose 1/CharacterPose1Wireframe",
+"description": "",
+"display_name": "Aild",
+"mirror": true,
+"nicknames": ["Aild"],
+"offset": Vector2(0, 350),
+"portraits": {
+"Pose 1/CharacterPose1Wireframe": {
+"image": "res://Assets/Characters/Aime/Pose 1/CharacterPose1Wireframe.png",
+"mirror": true,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Pose 2/CharacterPose2Wireframe": {
+"image": "res://Assets/Characters/Aime/Pose 2/CharacterPose2Wireframe.png",
+"mirror": true,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Pose 3/CharacterPose3Wireframe": {
+"image": "res://Assets/Characters/Aime/Pose 3/CharacterPose3Wireframe.png",
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Pose 3/CharacterPose3WireframeMirrored": {
+"image": "res://Assets/Characters/Aime/Pose 3/CharacterPose3WireframeMirrored.png",
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.5
+}
