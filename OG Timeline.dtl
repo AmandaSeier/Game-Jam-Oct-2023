@@ -81,7 +81,7 @@ if {Super_mario?} == "Yes":
 			set {Mario_scary?} = "Yes"
 			set {Hows_school_its} = 1
 
-else:
+elif {Super_mario?} == "No":
 	if {Lion?} == "No" and {Anth_interesting?} == "No":
 		You: *You really leave me no choice Aime...*
 		- Snoring Lion... Really?

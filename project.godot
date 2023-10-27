@@ -24,6 +24,8 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 glossary/default_case_sensitive=true
 variables={
 "Anth_interesting?": "\"No\"",
+"Are_these_clients_real_humans?": "\"False\"",
+"Code_obstained": "\"True\"",
 "Friend?": "",
 "Hows_school?": "\"No\"",
 "Hows_school_its": "0",
@@ -32,7 +34,9 @@ variables={
 "Password": "",
 "Player_name": "",
 "Super_mario?": "\"No\"",
-"Username": ""
+"Username": "",
+"What's_the_point_of_this_place?": "\"False\"",
+"Who_are_you?": "\"False\""
 }
 text/letter_speed=0.01
 text/skippable=true
