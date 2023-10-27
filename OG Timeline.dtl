@@ -1,4 +1,5 @@
 You: *Sometimes I wonder...*
+jump HELLO
 You: *What is it that makes my world real?*
 You: *How could I even know what real even means?*
 You: *I definitly feel each breath I take.*
@@ -74,29 +75,31 @@ You: *You really leave me no choice Aime...*
 	Aime: It's really easy actually! You just need to use SSH for many of them.
 	Aime: But we also learned that it's unsafe to use "admin" for both the username and password.
 	set {Hows_school?} = "Yes"
-	Aime (Pose 1/CharacterPose1Surpriced): Apparently there's a lot of servers that do this. Crazy right?
-	- Anything interesting happening lately?
-		Aime (Pose 1/CharacterPose1Smile): Hmm let me see...
-		Aime (Pose 1/CharacterPose1Smile): My cat had decided to climb a tree and ended on top of my neighbourgs house.
-		Aime: I don't know why he loves climbing so much.
-		Aime: He must be a monkey disquised as a cat.
-		set {Anth_interesting?} = "Yes"
-		jump Spørgsmål
-
-- Do you really still find Super Mario Bros scary?
+Aime (Pose 1/CharacterPose1Surpriced): Apparently there's a lot of servers that do this. Crazy right?
+- Do you really still find Super Mario Bros scary? [if {Mario_scary?} == "No"][else="hide"]
 	Aime (Pose 1/CharacterPose1Mad): Noooo! I would never find a game like that scary.
 	Aime (Pose 2/CharacterPose2Laughing): HA! I could play it in my sleep. The only one who would find something like that scary would be you!
 	You: Aha...
 	set {Mario_scary?} = "Yes"
 	You: *Well from what I remember it was quite the opposite*
-	- Snoring Lion... Really?
-		Aime (Pose 1/CharacterPose1Laughing): What you've never heard yourself sleeping?
-		Aime: Well I guess it makes sense now that I think of it.
-		Aime: I should record it sometime.
-		Aime (Pose 2/CharacterPose2Laughing): You would get shocked hahaha.
-		You: *I can already feel how it's going to be getting called that nickname the next couple of months.*
-		set {Lion?} = "Yes"
-		jump Spørgsmål
+- Snoring Lion... Really? [if {Lion?} == "No"][else="hide"]
+	Aime (Pose 1/CharacterPose1Laughing): What you've never heard yourself sleeping?
+	Aime: Well I guess it makes sense now that I think of it.
+	Aime: I should record it sometime.
+	Aime (Pose 2/CharacterPose2Laughing): You would get shocked hahaha.
+	You: *I can already feel how it's going to be getting called that nickname the next couple of months.*
+	set {Lion?} = "Yes"
+	jump Spørgsmål
+
+Aime: .
+- Anything interesting happening lately? [if {Anth_interesting?} == "No"][else="hide"]
+	Aime (Pose 1/CharacterPose1Smile): Hmm let me see...
+	Aime (Pose 1/CharacterPose1Smile): My cat had decided to climb a tree and ended on top of my neighbourgs house.
+	Aime: I don't know why he loves climbing so much.
+	Aime: He must be a monkey disquised as a cat.
+	set {Anth_interesting?} = "Yes"
+	jump Spørgsmål
+
 
 label Spørgsmål done
 
