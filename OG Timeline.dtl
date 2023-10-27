@@ -1,4 +1,7 @@
+You: *Sometimes I wonder...*
+You: *What is it that makes my world real?*
 You: *How could I even know what real even means?*
+jump HELLO
 You: *I definitly feel each breath I take.*
 You: *And I definitly am avare of each thought in my mind.*
 You: *But is feeling and being avere really enough?*
@@ -22,6 +25,7 @@ You: *I had decided to go out to enjoy the nice weather after school.*
 You: *I found a really nice spot to sit down next to a corn field.*
 You: *But before I knew it I was fast asleep*
 Aime: Finally! You're awake.
+label HELLO
 join Aime 3
 You: *Oh and this... This is Aime.*
 You: *We've been friends since elementary school*
@@ -142,8 +146,8 @@ else:
 join Aime 3
 You: About that SS-age thing you were talking about. How do you use it
 Aime (Pose 1/CharacterPose1Annoyed): No it's SSH
+Aime: "S S H"
 You: SSH?
-Aime (Pose 2/CharacterPose2Smile): "S S H"
 [background arg="res://Assets/Backgrounds/Field.png" fade="0.0"]
 [wait time="1.0"]
 [music path="res://Assets/SFX/Glitch Sound Effects.mp3" fade="0.0" volume="0.0"]
@@ -181,4 +185,29 @@ You: *What is going on?*
 You: *What should I say?*
 
 [text_input var="Username"]
-Aime: {Username}
+if {Username} == "Admin" or {Username} == "admin" or {Username} == "ADMIN":
+	Aime: Enter password
+	[text_input var="Password"]
+
+	if {Password} == "Admin" or {Username} == "admin" or {Password} == "ADMIN":
+		jump Correct username and password/
+	else:
+		jump incorrect-usename
+else:
+	label incorrect-usename
+	Aime: User does not exist. Blocking client.
+	Aime: Yes exactly SSH.
+	Aime: It's a pretty nice command
+	Aime: Huh?
+	Aime: You look pretty surpriced.
+	You: You didn't see that?
+	You: You almost turned into a robot
+	Aime: What? I don't know what you are talking about!
+	Aime: Perhaps you didn't get enough sleep after all?
+	Aime: Let me follow you home
+	You: *Since that day I carried on with my life as usual.*
+	You: *Although I was really startled by this experience no one believed me.*
+	You: *But I know what I saw was real.*
+	You: *I just keep thinking...*
+	You: *What if there was something else I could've said?*
+

@@ -12,7 +12,7 @@
 "display_name": "Aime",
 "mirror": false,
 "nicknames": ["Aimes"],
-"offset": Vector2(0, 350),
+"offset": Vector2(0, 550),
 "portraits": {
 "Pose 1/CharacterPose1Annoyed": {
 "image": "res://Assets/Characters/Aime/Pose 1/CharacterPose1Annoyed.png",
