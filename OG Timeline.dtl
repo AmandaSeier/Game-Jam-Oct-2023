@@ -35,7 +35,6 @@ Aime (Pose 1/CharacterPose1Smile): How long have you been sleeping?
 	Aime: I was just going for a walk when I noticed you sleeping on the ground.
 	Aime (Pose 2/CharacterPose2Laughing): At first I thought of sticking a straw in your ear, but I guess I'm just too good of a friend to do that
 	You: *Oh Aime... Gracious as always -_-*
-	set {Super_mario?} = "No"
 
 - Aime! What are you doing here?
 	Aime (Pose 1/CharacterPose1Smile): I'm just going for a walk.
@@ -47,99 +46,59 @@ Aime (Pose 1/CharacterPose1Smile): How long have you been sleeping?
 	Aime: And you have to defeat that scary turtle man
 	You: *Seems like Aime has her own definition of a scary game.*
 	You: *Apparently Super Mario Bros is one of them...*
-	set {Super_mario?} = "Yes"
 
 Aime: Do you mind if I stay with you?
 Aime: It seems like i can't let you go alone. Who knows where you'll fall asleep next.
 You: I don't know. I think I shou
 Aime (Pose 2/CharacterPose2EmbarrasedLaughing): Thanks! I didn't really want to head home straight away anyways.
+label HELLO
 
 set {Mario_scary?} = "No"
 set {Hows_school?} = "No"
 set {Lion?} = "No"
 set {Anth_interesting?} = "No"
 
-if {Super_mario?} == "Yes":
-	if {Mario_scary?} == "No" and {Hows_school?} == "No":
-		You: *You really leave me no choice Aime...*
-		- So... how's school ?
-			Aime: I'ts okay I guess. We've just started our IT course.
-			Aime (Pose 1/CharacterPose1Laughing): We learn about all sorts of things!
-			You: Like what?
-			Aime (Pose 2/CharacterPose2Smile): Like logging into servers and stuff.
-			Aime: It's really easy actually! You just need to use SSH for many of them.
-			Aime: But we also learned that it's unsafe to use "admin" for both the username and password.
-			Aime (Pose 1/CharacterPose1Surpriced): Apparently there's a lot of servers that do this. Crazy right?
-			set {Hows_school?} = "Yes"
-			set {Hows_school_its} = "1"
-		
-		- Do you really still find Super Mario Bros scary?
-			Aime (Pose 1/CharacterPose1Mad): Noooo! I would never find a game like that scary.
-			Aime (Pose 2/CharacterPose2Laughing): HA! I could play it in my sleep. The only one who would find something like that scary would be you!
-			You: Aha...
-			You: *Well from what I remember it was quite the opposite*
-			set {Mario_scary?} = "Yes"
-			set {Hows_school_its} = 1
+label Spørgsmål
+if {Mario_scary?} == "Yes":
+	if {Hows_school?} == "Yes":
+		if {Lion?} == "Yes":
+			if {Anth_interesting?} == "Yes"
+				jump Spørgsmål done
 
-elif {Super_mario?} == "No":
-	if {Lion?} == "No" and {Anth_interesting?} == "No":
-		You: *You really leave me no choice Aime...*
-		- Snoring Lion... Really?
-			Aime (Pose 1/CharacterPose1Laughing): What you've never heard yourself sleeping?
-			Aime: Well I guess it makes sense now that I think of it.
-			Aime: I should record it sometime.
-			Aime (Pose 2/CharacterPose2Laughing): You would get shocked hahaha.
-			You: *I can already feel how it's going to be getting called that nickname the next couple of months.*
-			set {Lion?} = "Yes"
-			set {Hows_school_its} = 1
-		
-		- Anything interesting happening lately?
-			Aime (Pose 1/CharacterPose1Smile): Hmm let me see...
-			Aime (Pose 1/CharacterPose1Smile): My cat had decided to climb a tree and ended on top of my neighbourgs house.
-			Aime: I don't know why he loves climbing so much.
-			Aime: He must be a monkey disquised as a cat.
-			set {Anth_interesting?} = "Yes"
-			set {Hows_school_its} = 1
+You: *You really leave me no choice Aime...*
+- So... how's school ?
+	Aime: I'ts okay I guess. We've just started our IT course.
+	Aime (Pose 1/CharacterPose1Laughing): We learn about all sorts of things!
+	You: Like what?
+	Aime (Pose 2/CharacterPose2Smile): Like logging into servers and stuff.
+	Aime: It's really easy actually! You just need to use SSH for many of them.
+	Aime: But we also learned that it's unsafe to use "admin" for both the username and password.
+	set {Hows_school?} = "Yes"
+	Aime (Pose 1/CharacterPose1Surpriced): Apparently there's a lot of servers that do this. Crazy right?
+	- Anything interesting happening lately?
+		Aime (Pose 1/CharacterPose1Smile): Hmm let me see...
+		Aime (Pose 1/CharacterPose1Smile): My cat had decided to climb a tree and ended on top of my neighbourgs house.
+		Aime: I don't know why he loves climbing so much.
+		Aime: He must be a monkey disquised as a cat.
+		set {Anth_interesting?} = "Yes"
+		jump Spørgsmål
 
+- Do you really still find Super Mario Bros scary?
+	Aime (Pose 1/CharacterPose1Mad): Noooo! I would never find a game like that scary.
+	Aime (Pose 2/CharacterPose2Laughing): HA! I could play it in my sleep. The only one who would find something like that scary would be you!
+	You: Aha...
+	set {Mario_scary?} = "Yes"
+	You: *Well from what I remember it was quite the opposite*
+	- Snoring Lion... Really?
+		Aime (Pose 1/CharacterPose1Laughing): What you've never heard yourself sleeping?
+		Aime: Well I guess it makes sense now that I think of it.
+		Aime: I should record it sometime.
+		Aime (Pose 2/CharacterPose2Laughing): You would get shocked hahaha.
+		You: *I can already feel how it's going to be getting called that nickname the next couple of months.*
+		set {Lion?} = "Yes"
+		jump Spørgsmål
 
-
-if {Super_mario?} == "Yes":
-	if {Mario_scary?} == "Yes":
-		You: *You really leave me no choice Aime...*
-		- So... how's school ?
-			Aime: I'ts okay I guess. We've just started our IT course.
-			Aime (Pose 1/CharacterPose1Laughing): We learn about all sorts of things!
-			You: Like what?
-			Aime (Pose 2/CharacterPose2Smile): Like logging into servers and stuff.
-			Aime: It's really easy actually! You just need to use SSH for many of them.
-			Aime: But we also learned that it's unsafe to use "admin" for both the username and password.
-			Aime (Pose 1/CharacterPose1Surpriced): Apparently there's a lot of servers that do this. Crazy right?
-	
-	elif {Hows_school?} == "Yes":
-		You: *You really leave me no choice Aime...*
-		- Do you really still find Super Mario Bros scary?
-			Aime (Pose 1/CharacterPose1Mad): Noooo! I would never find a game like that scary.
-			Aime (Pose 2/CharacterPose2Laughing): HA! I could play it in my sleep. The only one who would find something like that scary would be you!
-			You: Aha...
-			You: *Well from what I remember it was quite the opposite*
-
-else:
-	if {Lion?} == "Yes":
-		You: *You really leave me no choice Aime...*
-		- Anything interesting happening lately?
-			Aime (Pose 1/CharacterPose1Smile): Hmm let me see...
-			Aime (Pose 1/CharacterPose1Smile): My cat had decided to climb a tree and ended on top of my neighbourgs house.
-			Aime: I don't know why he loves climbing so much.
-			Aime: He must be a monkey disquised as a cat.
-	
-	elif {Anth_interesting?} == "Yes":
-		You: *You really leave me no choice Aime...*
-		- Snoring Lion... Really?
-			Aime (Pose 1/CharacterPose1Laughing): What you've never heard yourself sleeping?
-			Aime: Well I guess it makes sense now that I think of it.
-			Aime: I should record it sometime.
-			Aime (Pose 2/CharacterPose2Laughing): You would get shocked hahaha.
-			You: *I can already feel how it's going to be getting called that nickname the next couple of months.*
+label Spørgsmål done
 
 join Aime 3
 You: About that SS-age thing you were talking about. How do you use it

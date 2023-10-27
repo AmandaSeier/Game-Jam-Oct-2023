@@ -25,7 +25,7 @@ glossary/default_case_sensitive=true
 variables={
 "Anth_interesting?": "\"No\"",
 "Are_these_clients_real_humans?": "\"False\"",
-"Code_obstained": "\"True\"",
+"Code_obtained": "\"True\"",
 "Friend?": "",
 "Hows_school?": "\"No\"",
 "Hows_school_its": "0",
