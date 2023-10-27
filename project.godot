@@ -23,8 +23,16 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 
 glossary/default_case_sensitive=true
 variables={
+"Anth_interesting?": "\"No\"",
 "Friend?": "",
-"Player_name": ""
+"Hows_school?": "\"No\"",
+"Hows_school_its": "0",
+"Lion?": "\"No\"",
+"Mario_scary?": "\"No\"",
+"Password": "",
+"Player_name": "",
+"Super_mario?": "\"No\"",
+"Username": ""
 }
 text/letter_speed=0.01
 text/skippable=true
