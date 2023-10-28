@@ -1,0 +1,172 @@
+You: *Sometimes I wonder...*
+jump HELLO
+You: *What is it that makes my world real?*
+You: *How could I even know what real even means?*
+You: *I definitly feel each breath I take.*
+You: *And I definitly am avare of each thought in my mind.*
+You: *But is feeling and being avere really enough?*
+You: *I'ts so confusing...*
+You: *Where am I even?*
+You: *What's my name?*
+[text_input var="Player_name"]
+You: *I'ts getting hard to even remember.*
+You: *Right! {Player_name}... That's my name.*
+You: *Good to know I can still remember something.*
+You: *That I can still remember one of my memories...*
+You: *Real memories...*
+You: *What if they aren-*
+Aime: {Player_name}!
+{Player_name} wake up!
+[background arg="res://Assets/Backgrounds/Field.png" fade="1.0"]
+[wait time="1.0"]
+You: *It was a bright and sunny day.*
+You: *The birds were singing and the sky had a beautiful blue color.*
+You: *I had decided to go out to enjoy the nice weather after school.*
+You: *I found a really nice spot to sit down next to a corn field.*
+You: *But before I knew it I was fast asleep*
+Aime: Finally! You're awake.
+join Aime 3
+You: *Oh and this... This is Aime.*
+You: *We've been friends since elementary school*
+You: *She is a good friend, but sometimes I feel like she won't leave me alone.*
+Aime (Pose 1/CharacterPose1Smile): How long have you been sleeping?
+- I honestly don't know
+	Aime (Pose 2/CharacterPose2Smile): You seem pretty well rested to me.
+	Aime: Seems like the Snoring Lion has slept for quite a while.
+	Aime: I was just going for a walk when I noticed you sleeping on the ground.
+	Aime (Pose 2/CharacterPose2Laughing): At first I thought of sticking a straw in your ear, but I guess I'm just too good of a friend to do that
+	You: *Oh Aime... Gracious as always -_-*
+
+- Aime! What are you doing here?
+	Aime (Pose 1/CharacterPose1Smile): I'm just going for a walk.
+	Aime (Pose 1/CharacterPose1Laughing): I should be the one to ask what the Sleepy Pumpkin is doing out here.
+	Aime (Pose 2/CharacterPose2Laughing): Wait let me guess. You probably stayed up all night playing video games
+	Aime (Pose 2/CharacterPose2Smile): Or wait no. You couldn't even sleep because of that scary game you played.
+	You: What scary game?
+	Aime: The one where you have to jump from platform to platform.
+	Aime: And you have to defeat that scary turtle man
+	You: *Seems like Aime has her own definition of a scary game.*
+	You: *Apparently Super Mario Bros is one of them...*
+
+Aime: Do you mind if I stay with you?
+Aime: It seems like i can't let you go alone. Who knows where you'll fall asleep next.
+You: I don't know. I think I shou
+Aime (Pose 2/CharacterPose2EmbarrasedLaughing): Thanks! I didn't really want to head home straight away anyways.
+label HELLO
+
+set {Mario_scary?} = "No"
+set {Hows_school?} = "No"
+set {Lion?} = "No"
+set {Anth_interesting?} = "No"
+
+label Spørgsmål
+if {Mario_scary?} == "Yes":
+	if {Hows_school?} == "Yes":
+		if {Lion?} == "Yes":
+			if {Anth_interesting?} == "Yes"
+				jump Spørgsmål done
+
+You: *You really leave me no choice Aime...*
+- So... how's school ?
+	Aime: I'ts okay I guess. We've just started our IT course.
+	Aime (Pose 1/CharacterPose1Laughing): We learn about all sorts of things!
+	You: Like what?
+	Aime (Pose 2/CharacterPose2Smile): Like logging into servers and stuff.
+	Aime: It's really easy actually! You just need to use SSH for many of them.
+	Aime: But we also learned that it's unsafe to use "admin" for both the username and password.
+	set {Hows_school?} = "Yes"
+Aime (Pose 1/CharacterPose1Surpriced): Apparently there's a lot of servers that do this. Crazy right?
+- Do you really still find Super Mario Bros scary? [if {Mario_scary?} == "No"][else="hide"]
+	Aime (Pose 1/CharacterPose1Mad): Noooo! I would never find a game like that scary.
+	Aime (Pose 2/CharacterPose2Laughing): HA! I could play it in my sleep. The only one who would find something like that scary would be you!
+	You: Aha...
+	set {Mario_scary?} = "Yes"
+	You: *Well from what I remember it was quite the opposite*
+- Snoring Lion... Really? [if {Lion?} == "No"][else="hide"]
+	Aime (Pose 1/CharacterPose1Laughing): What you've never heard yourself sleeping?
+	Aime: Well I guess it makes sense now that I think of it.
+	Aime: I should record it sometime.
+	Aime (Pose 2/CharacterPose2Laughing): You would get shocked hahaha.
+	You: *I can already feel how it's going to be getting called that nickname the next couple of months.*
+	set {Lion?} = "Yes"
+	jump Spørgsmål
+
+Aime: .
+- Anything interesting happening lately? [if {Anth_interesting?} == "No"][else="hide"]
+	Aime (Pose 1/CharacterPose1Smile): Hmm let me see...
+	Aime (Pose 1/CharacterPose1Smile): My cat had decided to climb a tree and ended on top of my neighbourgs house.
+	Aime: I don't know why he loves climbing so much.
+	Aime: He must be a monkey disquised as a cat.
+	set {Anth_interesting?} = "Yes"
+	jump Spørgsmål
+
+
+label Spørgsmål done
+
+join Aime 3
+You: About that SS-age thing you were talking about. How do you use it
+Aime (Pose 1/CharacterPose1Annoyed): No it's SSH
+Aime: "S S H"
+You: SSH?
+[background arg="res://Assets/Backgrounds/Field.png" fade="0.0"]
+[wait time="1.0"]
+[music path="res://Assets/SFX/Glitch Sound Effects.mp3" fade="0.0" volume="0.0"]
+[wait time="4.0"]
+[background arg="res://Assets/Backgrounds/MatrixBackground.png" fade="0.0"]
+[wait time="0.15"]
+[background arg="res://Assets/Backgrounds/Field.png" fade="0.0"]
+[wait time="0.15"]
+[background arg="res://Assets/Backgrounds/MatrixBackground.png" fade="0.0"]
+[wait time="0.15"]
+[background arg="res://Assets/Backgrounds/Field.png" fade="0.0"]
+[wait time="2.0"]
+update Aime (Pose 1/CharacterPose1Wireframe)
+[wait time="0.15"]
+update Aime (Pose 3/CharacterPose3Mad)
+[wait time="0.15"]
+update Aime (Pose 2/CharacterPose2Wireframe)
+[wait time="0.15"]
+update Aime (Pose 1/CharacterPose1Smile)
+[music fade="2.0" volume="0.0"]
+[wait time="1.0"]
+Aime: E... En... E
+Aime: Ente... ame
+Aime: Enter username.
+You: What do you mean Aime?
+Aime: U.. User does not exist. 3 tries left.
+Aime: Enter username.
+You: Aime?
+Aime: User does not exist. 2 tries left.
+Aime: Enter username.
+You: *She is standing completely still*
+You: Aime snap out of it!
+Aime: User does not exist. 1 try left.
+You: *What is going on?*
+You: *What should I say?*
+
+[text_input var="Username"]
+if {Username} == "Admin" or {Username} == "admin" or {Username} == "ADMIN":
+	Aime: Enter password
+	[text_input var="Password"]
+	
+	if {Password} == "Admin" or {Username} == "admin" or {Password} == "ADMIN":
+		jump Correct username and password/
+	else:
+		jump incorrect-usename
+else:
+	label incorrect-usename
+	Aime: User does not exist. Blocking client.
+	Aime: Yes exactly SSH.
+	Aime: It's a pretty nice command
+	Aime: Huh?
+	Aime: You look pretty surpriced.
+	You: You didn't see that?
+	You: You almost turned into a robot
+	Aime: What? I don't know what you are talking about!
+	Aime: Perhaps you didn't get enough sleep after all?
+	Aime: Let me follow you home
+	You: *Since that day I carried on with my life as usual.*
+	You: *Although I was really startled by this experience no one believed me.*
+	You: *But I know what I saw was real.*
+	You: *I just keep thinking...*
+	You: *What if there was something else I could've said?*

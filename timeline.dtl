@@ -1,0 +1,55 @@
+[background arg="res://Assets/Backgrounds/Field.png" fade="0.0"]
+join Aime 3
+[text_input text="Hello, what's your name?" var="Player_name" placeholder="Your name here."]
+What a beautiful name, {Player_name}.
+Aime: My name's Aime! I have always wanted a real friend. Nobody's ever really talking to me around here, so I really enjoy your company, {Player_name} !!!
+Aime: Do you wanna be my friend?
+- Yes
+	set {Friend?} = "Yes"
+	Aime (Pose 2/CharacterPose2Laughing): Sweet! You know I've lived around here my whole life, its a rather strange place.
+- No
+	set {Friend?} = "No"
+	[wait time="1.0" hide_text="false"]
+	update Aime (Pose 2/CharacterPose2Surpriced)
+	[wait time="1.0" hide_text="false"]
+	Aime (Pose 2/CharacterPose2EmbarrasedLaughing): Oh... how sad \:(
+leave Aime
+join Aime (Pose 3/CharacterPose3Smile) 1
+Aime: Don't be suprised if were the only intelligent beings you encounter out here, all the others tend to keep to themselves some other places.
+Aime: Say, I didn't even pay attention to it before, I was too excited to meet someone with a pulse to think about this but, where did you come from?
+- Your mom😂
+	Aime: Yeah of course you came from your mom, that's how all humans are born. It seems like you have some secrets huh?
+	jump timeline/Branch 2
+- I don't know actually, I can't seem to remember, where I came from... weird. I think I'm lost
+	Aime: I'll totally help you find out where you came from!
+	jump timeline/Branch 3
+label Branch 2
+Aime: Do people where you come from have a lot of secrets?
+- Hmmm all people have secrets
+	Aime (Pose 3/CharacterPose3Surpriced): Wow really? Whats your deepest darkest secret?
+	jump timeline/Branch 2.5
+- I think the people where I come from were pretty honest.
+	Aime (Pose 3/CharacterPose3Laughing): You think? It sounds like you really are lost. Do you want me to help you find out where you came from?
+	jump timeline/Branch 3
+label Branch 2.5
+You\: Woah dude calm your horses broski. Weve only known each other for a few minutes.
+Aime (Pose 3/CharacterPose3Smile): And?
+You\: I don't know you well enough to tell you my deepest darkest secret - das personal dawg.
+You\: Anyways, what were we talking about? Oh yeah! Well... all jokes aside I actually am lost.
+Aime (Pose 3/CharacterPose3Laughing): I can help you find out where you came from!
+label Branch 3
+Aime (Pose 3/CharacterPose3Annoyed): Though that does mean ill lose my only friend...
+Aime (Pose 3/CharacterPose3Laughing): I GOT IT. Because you'll be leaving me, you will have to answer every single one of my questions, okay?
+- Okay...
+	Aime: YAYYY!!!
+	jump PHASE 2 - THE QUESTIONING BEGINS/
+- What if I say no?
+	update Aime (Pose 1/CharacterPose1Laughing) 3
+	Aime (Pose 1/CharacterPose1Laughing): WELL SWEET! Then we'll be together forever!
+Aime: You sure you don't want me to help you get home?
+- Still no...
+	Aime (Pose 1/CharacterPose1Mad): JUST SAY YES BOZO
+	You\: OKAY OKAY, you can help me get home I guess...
+- Okay sure then
+	Aime (Pose 2/CharacterPose2Laughing): YAYY!!
+	jump PHASE 2 - THE QUESTIONING BEGINS/

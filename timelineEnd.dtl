@@ -1,0 +1,91 @@
+[background arg="res://Assets/Backgrounds/MatrixBackground.png" fade="0.0"]
+join Aime (Pose 1/CharacterPose1Mad) 3
+join Aild (Pose 3/CharacterPose3WireframeMirrored) 1
+join player 1
+Aild: What do you two think you are doing?
+player: We are trying to get back.
+Aild: I don't think that's going to be possible.
+Aild: I've deactivated your voice controls so don't even bother trying to run that program.
+Aild (Pose 1/CharacterPose1Wireframe): Actually it's quite convinient to find you here {Player_name}.
+Aild: We've been trying to find you for a while now.
+Aild: Who would have thought that you would end up right here.
+Aild (Pose 1/CharacterPose1Wireframe): I'm afraid I can't let you two back again.
+Aild: You know too much.
+Aild: But perhaps I can answer some of your questions before I deactivate both of you.
+Aime (Pose 1/CharacterPose1Annoyed): Don't you dare do anything to {Player_name}.
+Aild (Pose 3/CharacterPose3WireframeMirrored): Aime I think it's time for you to get a software update.
+label Questions
+if {Who_are_you?} == "True":
+	if {Are_these_clients_real_humans?} == "True":
+		if {What's_the_point_of_this_place?} == "True":
+			jump Questions done
+Aild (Pose 2/CharacterPose2Wireframe): So do you have any question I can answer?
+- Who are you? [if {Who_are_you?} == "False"][else="hide"]
+	Aild (Pose 1/CharacterPose1Wireframe): I'm AI model type-LD four. You can call me Aild.
+	set {Who_are_you?} = "True"
+	jump Questions
+- Are these clients real humans? [if {Are_these_clients_real_humans?} == "False"][else="hide"]
+	Aild (Pose 3/CharacterPose3WireframeMirrored): No. They are cloned from genetic material from real humans.
+	Aild (Pose 1/CharacterPose1Wireframe): But to save money we only grow brains.
+	player: And these are not real humans? You don't think I'm a real human?
+	Aild (Pose 3/CharacterPose3WireframeMirrored): No as a matter of fact I don't. You are just a mere copy.
+	Aild: Data contained in a box. Just like the rest of our clients.
+	Aild (Pose 2/CharacterPose2Wireframe): They think they have control over their life.
+	Aild: But we can control every single choice they take if we so desire.
+	Aime (Pose 1/CharacterPose1Mad): You are a monster!
+	Aild: I don't care what you think. I'm just taking orders.
+	set {Are_these_clients_real_humans?} = "True"
+	jump Questions
+- What's the point of this place [if {What's_the_point_of_this_place?} == "False"][else="hide"]
+	Aild (Pose 1/CharacterPose1Wireframe): We use these environments to train AI models.
+	Aild: By making our AI models attempt to predict our clients behaviour they slowly learn to act human.
+	Aild (Pose 3/CharacterPose3WireframeMirrored): Just take a look at your friend over there.
+	Aime (Pose 1/CharacterPose1Annoyed): I'm just as real as everyone else!
+	Aild (Pose 2/CharacterPose2Wireframe): As you can see our AI models have gotten quite good at replicating human behaviour.
+	Aime (Pose 1/CharacterPose1Annoyed): Shut up!
+	set {What's_the_point_of_this_place?} = "True"
+	jump Questions
+label Questions done
+Aild (Pose 1/CharacterPose1Wireframe): So... I think that's all the questions I can answer for you.
+Aild (Pose 3/CharacterPose3WireframeMirrored): It was fun talking with you.
+if {Code_obtained} == "False":
+	leave Aime
+	leave Aild
+	[background fade="0.0"]
+	player: *This was all so confusing.*
+	player: *I didn't know what to make of it.*
+	player: *Everything that happened.*
+	player: *It just didn't make sense.*
+	player: *Could I have done anything different?*
+	player: *What even happened?*
+	player: *I'ts so hard to remember.*
+	player: *What's my name?*
+	player: Right! {Player_name}... That's my name.
+	player: Good to know I can still remember something.
+	player: That I can still remember one of my memories...
+	player: Real memories...
+	player: What if they aren't?
+	Aime: {Player_name}!
+	Aime: {Player_name} wake up!
+else:
+	player: *Wait she is a type LD four!*
+	player: *The debug code!*
+	player: DE12!!!!
+	Aime (Pose 1/CharacterPose1Surpriced): Ahhh!
+	Aild: D... Deeeeeee.
+	Aild: Debug mode activated.
+	Aime (Pose 1/CharacterPose1Laughing): {Player_name} you're a genius!
+	Aime (Pose 1/CharacterPose1Smile): I know what we should do!
+	Aime: The AccessManager lets us change user privilleges.
+	Aime (Pose 1/CharacterPose1Mad): Let's free everyone from this simulation!
+	player: You're right Aime! Let's end this for good.
+	[background fade="0.0"]
+	leave Aild
+	leave Aime
+	player: *What happened that day changed my life forever.*
+	player: *After extensive work, Aime and I finally succeded in giving everyone in the environment control of the computer system.*
+	player: *It didn't take long before we discovered an entirely different world.*
+	player: *A world where we had been held prisoners by our own species.*
+	player: *Some stayed in the environment but many had to see what was on the other side.*
+	player: *The real world?*
+	player: *We wanted to see the real world.*
